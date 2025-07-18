@@ -498,9 +498,9 @@ class PDFChatApp:
         
         # Profile links
         st.sidebar.markdown("### 👨‍💻 Developer")
-        linkedin_link = "https://www.linkedin.com/in/snsupratim/"
-        kaggle_link = "https://www.kaggle.com/snsupratim/"
-        github_link = "https://github.com/snsupratim/"
+        linkedin_link = "https://www.linkedin.com/in/sairakshith-talluru-a69272265/"
+        kaggle_link = "https://www.kaggle.com/sairakshith2004"
+        github_link = "https://github.com/sairakshith2004"
         
         st.sidebar.markdown(
             f"[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]({linkedin_link})"

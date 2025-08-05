@@ -1,0 +1,13 @@
+PyPDF2==3.0.1
+ streamlit==1.20.0
+ langchain==0.0.200
+ langchain-community==0.0.200
+ langchain-openai==0.0.200
+ transformers==4.30.2
+ tiktoken==0.3.3
+ faiss-cpu==1.7.4
+ pandas==2.1.1
+ numpy==1.26.4
+ python-dotenv==1.0.0
+ markdown2==2.4.8
+ requests==2.31.0

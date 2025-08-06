@@ -23,10 +23,21 @@ def apply_auth_styles():
     """Apply custom CSS styles for the authentication page"""
     st.markdown("""
     <style>
-    /* Hide default Streamlit elements */
+    /* Hide default Streamlit elements and set dark background */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
+    
+    /* Dark mode background */
+    .stApp {
+        background-color: #1a1a1a !important;
+        color: white !important;
+    }
+    
+    .main .block-container {
+        background-color: #1a1a1a !important;
+        color: white !important;
+    }
     
     /* Main container styling */
     .auth-container {
@@ -35,7 +46,7 @@ def apply_auth_styles():
         padding: 2rem;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         border-radius: 20px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         margin-top: 3rem;
     }
     
@@ -89,26 +100,42 @@ def apply_auth_styles():
         margin-bottom: 8px !important;
     }
     
-    /* Button styling */
+    /* Button styling - green buttons with white text */
     .stButton > button {
-        background: linear-gradient(45deg, #FF6B6B, #FF8E53);
-        color: white;
-        border: none;
-        border-radius: 10px;
-        padding: 12px 24px;
-        font-size: 16px;
-        font-weight: 600;
-        width: 100%;
-        transition: all 0.3s ease;
-        margin-top: 1rem;
+        background: linear-gradient(45deg, #4CAF50, #2E7D32) !important;
+        color: white !important;
+        border: 2px solid #4CAF50 !important;
+        border-radius: 10px !important;
+        padding: 12px 24px !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        width: 100% !important;
+        transition: all 0.3s ease !important;
+        margin-top: 1rem !important;
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3) !important;
     }
     
     .stButton > button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 20px rgba(255,107,107,0.3);
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4) !important;
+        background: linear-gradient(45deg, #43A047, #1B5E20) !important;
+        border: 2px solid #43A047 !important;
     }
     
-    # Tab styling - make text more visible, bold and bright
+    .stButton > button:focus {
+        background: linear-gradient(45deg, #4CAF50, #2E7D32) !important;
+        color: white !important;
+        border: 2px solid #4CAF50 !important;
+        outline: none !important;
+    }
+    
+    .stButton > button:active {
+        background: linear-gradient(45deg, #43A047, #1B5E20) !important;
+        color: white !important;
+        transform: translateY(0px) !important;
+    }
+    
+    /* Tab styling */
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px;
         background-color: rgba(255,255,255,0.2);
@@ -146,43 +173,24 @@ def apply_auth_styles():
         margin-top: 1rem;
     }
     
-    /* Welcome message styling */
-    .welcome-container {
-        text-align: center;
-        padding: 3rem 2rem;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 20px;
-        color: white;
-        margin: 2rem auto;
-        max-width: 500px;
+    /* Dark mode form headers */
+    h3 {
+        color: white !important;
     }
     
-    .welcome-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    /* Dark mode for main content area */
+    .element-container {
+        color: white !important;
     }
     
-    .welcome-message {
-        font-size: 1.2rem;
-        opacity: 0.9;
-        margin-bottom: 2rem;
+    /* Sidebar dark mode */
+    .css-1d391kg {
+        background-color: #2d2d2d !important;
     }
     
-    .logout-btn {
-        background: rgba(255,255,255,0.2);
-        color: white;
-        border: 2px solid white;
-        border-radius: 25px;
-        padding: 10px 30px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-    }
-    
-    .logout-btn:hover {
-        background: white;
-        color: #667eea;
+    .sidebar .sidebar-content {
+        background-color: #2d2d2d !important;
+        color: white !important;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -297,9 +305,8 @@ def login():
             username = st.text_input("👤 Username", placeholder="Enter your username")
             password = st.text_input("🔒 Password", type="password", placeholder="Enter your password")
             
-            col1, col2, col3 = st.columns([1,2,1])
-            with col2:
-                login_submitted = st.form_submit_button("Sign In", use_container_width=True)
+            # Green sign-in button with checkmark
+            login_submitted = st.form_submit_button("✅ Sign In", use_container_width=True)
             
             if login_submitted:
                 errors = validate_input(username, password)
@@ -323,9 +330,8 @@ def login():
             new_pass = st.text_input("🔒 Choose Password", type="password", placeholder="Create a strong password")
             confirm_pass = st.text_input("🔒 Confirm Password", type="password", placeholder="Confirm your password")
             
-            col1, col2, col3 = st.columns([1,2,1])
-            with col2:
-                signup_submitted = st.form_submit_button("Create Account", use_container_width=True)
+            # Keep the create account button with original styling
+            signup_submitted = st.form_submit_button("Create Account", use_container_width=True)
             
             if signup_submitted:
                 errors = validate_input(new_user, new_pass, is_signup=True)

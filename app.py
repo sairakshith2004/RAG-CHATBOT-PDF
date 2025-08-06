@@ -9,6 +9,8 @@ from typing import List, Optional, Tuple
 import tempfile
 import json
 import asyncio
+from auth import require_auth 
+require_auth()
 import nest_asyncio
 
 # Apply nest_asyncio to fix event loop issues

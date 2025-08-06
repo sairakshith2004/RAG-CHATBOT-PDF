@@ -1,6 +1,6 @@
 # AI-Powered PDF Chat Assistant
 
-This project is an AI-powered chatbot that allows you to upload PDF documents and ask questions about their content. It uses Google Gemini (via LangChain) for question answering and FAISS for efficient document retrieval.
+This project is an AI-powered chatbot that allows you to upload PDF documents and ask questions about their content. It leverages Google Gemini (via LangChain) for question answering and FAISS for efficient document retrieval, all within a user-friendly Streamlit interface.
 
 ## Features
 
@@ -9,7 +9,8 @@ This project is an AI-powered chatbot that allows you to upload PDF documents an
 - Handles large documents with adaptive chunking and progress tracking
 - Caches vector stores for faster subsequent queries
 - Download your conversation history as CSV or JSON
-- User-friendly Streamlit interface
+- Secure login system (customizable)
+- Modern, responsive UI with custom HTML/CSS support
 
 ## Setup
 
@@ -33,15 +34,20 @@ This project is an AI-powered chatbot that allows you to upload PDF documents an
 
 ## Usage
 
-1. Enter your [Google AI API Key](https://ai.google.dev/) in the sidebar.
-2. Upload one or more PDF files.
-3. Ask questions about the content of your PDFs.
-4. Download your conversation history if needed.
+1. Log in using your credentials (or sign up if enabled).
+2. Enter your [Google AI API Key](https://ai.google.dev/) in the sidebar.
+3. Upload one or more PDF files.
+4. Ask questions about the content of your PDFs.
+5. Download your conversation history if needed.
 
 ## Project Structure
 
 - `app.py` — Main Streamlit application
+- `auth/` — Authentication utilities and login/signup logic
+    - `auth.py` — Handles user authentication, session management, and access control for the app
 - `faiss_index/` — Stores FAISS vector index and cache files
+- `images/` — UI images and screenshots
+- `login.html`, `style.css` — Custom login page and styles
 - `requirements.txt` — Python dependencies
 
 ## Credits
@@ -49,7 +55,10 @@ This project is an AI-powered chatbot that allows you to upload PDF documents an
 Developed by [Sai Rakshith Talluru](https://www.linkedin.com/in/sairakshith-talluru-a69272265/)
 
 ---
-## to run this in terminal use 
- streamlit run app.py
 
-Feel free to contribute
+## Quick Start
+
+To run this project in your terminal, use:
+```sh
+streamlit run app.py
+```

@@ -62,3 +62,40 @@ To run this project in your terminal, use:
 ```sh
 streamlit run app.py
 ```
+# 🤖 MyRAG Chatbot AI
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+A smart and interactive **RAG (Retrieval-Augmented Generation) Chatbot**, built using **LangChain**, **OpenAI**, and **FAISS**, designed to answer domain-specific questions by combining LLM power with custom knowledge bases.
+
+---
+
+## 🚀 Features
+
+- 🔍 Retrieval-based Question Answering
+- 🧠 Powered by OpenAI / Local LLMs
+- 🗃️ Vector Store (FAISS) for efficient knowledge retrieval
+- 🌐 Hosted with Gradio / Streamlit / Render
+- 💬 Clean chatbot UI with real-time responses
+
+---
+
+## 🔧 Tech Stack
+
+- Python 🐍  
+- LangChain  
+- OpenAI / Hugging Face Transformers  
+- FAISS (Vector DB)  
+- Gradio / Streamlit (Frontend UI)  
+- Hugging Face Spaces / Render / Streamlit Cloud (Hosting)
+
+---
+
+## 🛠️ Installation
+
+```bash
+git clone https://github.com/your-username/myrag-chatbot.git
+cd myrag-chatbot
+pip install -r requirements.txt
+python app.py
+

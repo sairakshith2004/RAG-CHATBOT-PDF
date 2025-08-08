@@ -42,14 +42,19 @@ This project is an AI-powered chatbot that allows you to upload PDF documents an
 
 ## Project Structure
 
+
+## Project Structure
+
 - `app.py` — Main Streamlit application
 - `auth/` — Authentication utilities and login/signup logic
-    - `auth.py` — Handles user authentication, session management, and access control for the app
+- `auth.py` — Handles user authentication, session management, and access control for the app
+- `login_signup.py` — Streamlit login and signup forms
+- `auth_utils.py` — Helper functions for authentication
 - `faiss_index/` — Stores FAISS vector index and cache files
 - `images/` — UI images and screenshots
 - `login.html`, `style.css` — Custom login page and styles
-- `requirements.txt` — Python dependencies
-
+- `users.json` — Stores registered user credentials and metadata
+- `requirements.txt
 ## Credits
 
 Developed by [Sai Rakshith Talluru](https://www.linkedin.com/in/sairakshith-talluru-a69272265/)

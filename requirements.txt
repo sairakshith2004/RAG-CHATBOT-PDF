@@ -11,3 +11,21 @@ PyPDF2==3.0.1
  python-dotenv==1.0.0
  markdown2==2.4.8
  requests==2.31.0
+ pygments==2.19.2
+mdurl==0.1.2
+markdown-it-py==3.0.0
+rich==14.1.0
+langchain==0.1.14  # Stable version as of August 2024
+langchain-community==0.0.34  # Compatible version
+langchain-core==0.1.33
+langchain-google-genai==0.1.1  # For Google Gemini integration
+streamlit>=1.33.0
+langchain==0.1.14
+langchain-community==0.0.34
+langchain-core==0.1.33
+langchain-google-genai==0.1.1
+google-generativeai>=0.3.0
+PyPDF2>=3.0.0
+faiss-cpu>=1.7.0  # or faiss-gpu if you need GPU support
+python-dotenv>=1.0.0
+tiktoken>=0.5.0

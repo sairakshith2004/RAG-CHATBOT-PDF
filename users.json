@@ -25,12 +25,5 @@
   "sivasath": {
     "password": "eb5389bfdd6e53076eb31ce0698695723c848af4c390f3e6c08c3e3e0ac12365",
     "created_at": "2025-08-08 22:38:34"
-  },
-  "Rocky": {
-    "password": "2729b9afba3926d323b2299d4ddc6ce91bf1e820382a071437e0ee844ab5664a",
-    "email": "tallururaksh@gmail.com",
-    "created_at": "2025-09-03T15:46:41.924112",
-    "login_count": 1,
-    "last_login": "2025-09-03T15:46:49.751391"
   }
 }
